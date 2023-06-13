@@ -60,6 +60,9 @@ Once we identified whether an image contained a dog or a human, we employed a pr
 ## Testing the Model
 To evaluate the performance of our model, we tested it on a variety of images, including both dogs and humans. The results were impressive, with the model accurately identifying dog breeds in dog images and finding resemblances between humans and specific dog breeds. The model's ability to classify dog breeds demonstrated its effectiveness in image classification tasks.
 
+## Metrics Justificacion
+**Accuracy:** Accuracy is a widely used metric in classification problems and provides a straightforward measure of the model's overall correctness. In the context of dog breed classification, accuracy represents the percentage of correctly predicted dog breeds out of the total predictions. It is a simple and intuitive metric that provides an easy-to-understand measure of how well the model is performing.
+
 ## Improvements and Future Work
 While our model achieved commendable results, there are several areas where further improvements can be made:
 
