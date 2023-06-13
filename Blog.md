@@ -3,11 +3,6 @@
 ## Problem Statement:
 The problem is to build a dog breed classification model that can accurately predict the breed of a dog given an image. The model should be able to handle different dog breeds and achieve high accuracy in its predictions.
 
-# Strategy for Building the AI Dog Breed Classifier
-
-## Problem Statement Recap
-The problem is to build a dog breed classification model that can accurately predict the breed of a dog given an image. The model should be able to handle different dog breeds and achieve high accuracy in its predictions.
-
 ## Strategy
 
 To solve the problem of dog breed classification, we will follow a step-by-step strategy that encompasses data preparation, model development, training, and evaluation. The expected solution will be a trained model capable of accurately classifying dog breeds based on input images. Here is the strategy:
