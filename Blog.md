@@ -123,4 +123,16 @@ While our model achieved commendable results, there are several areas where furt
 
 3. **Ensemble Methods:** Building an ensemble of multiple models can further enhance the model's performance by leveraging the diversity of predictions from different models.
 
+## Experimentation and Iteration
+**Iteration 1**
+Only two layers were implemented.
+
+**Iteration 2**
+In the second iteration, a deeper model architecture, was implemented. The increased depth allowed for more complex feature extraction and potentially better discrimination between similar-looking breeds. The model was trained for a longer number of epochs to ensure convergence. Convolutional layers were added.
+
+**Evaluation of Intermediate Solutions**
+At the end of each iteration, the model's performance was evaluated using the same metrics as before. Iteration 1 resulted in a slight improvement in accuracy. However, it was observed that misclassifications still occurred for certain breeds. Iteration 2 showed a more significant improvement, with the accuracy increasing to 82% in the training data, and 67% in the test data, indicating better discrimination between similar breeds.
+
+By documenting the process of improving the model architecture and reporting the initial, intermediate, and final solutions, we can track the progress made and provide evidence for the accuracy and effectiveness of the final solution.
+
 In conclusion, our journey into building an AI dog breed classifier has showcased the power of deep learning and CNNs in image classification tasks. By combining the ability to detect dogs and humans with accurate breed classification, we have created an intelligent system capable of recognizing dog breeds and finding resemblances between humans and dogs. The potential applications of such a model are vast, from pet adoption services to entertainment and beyond. With further advancements and improvements, we can expect even more accurate and sophisticated models in the future.
