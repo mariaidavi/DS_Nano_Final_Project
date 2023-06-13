@@ -6,7 +6,16 @@ The problem is to build a dog breed classification model that can accurately pre
 In today's blog post, we delve into the fascinating world of artificial intelligence and explore how we can build a model to classify dog breeds. We'll go through the step-by-step process of creating a dog breed classifier that can detect both dogs and humans, and even find a resemblance between humans and specific dog breeds. This project demonstrates the power of deep learning and convolutional neural networks (CNNs) in image classification tasks.
 
 ## Dataset and Preprocessing
-To train our model, we utilized a dataset consisting of dog images from various breeds. The dataset was carefully curated and annotated to ensure accurate labeling. We also incorporated a dataset of human images to enable our model to find resemblances between humans and dog breeds. Preprocessing techniques such as resizing, normalization, and data augmentation were applied to enhance the model's ability to generalize across different image variations.
+To train our model, we utilized a dataset consisting of dog images from various breeds. The dataset was carefully curated and annotated to ensure accurate labeling. We also incorporated a dataset of human images to enable our model to find resemblances between humans and dog breeds. Preprocessing techniques such as resizing and normalization were applied to enhance the model's ability to generalize across different image variations.
+
+More specifically, the data contains the following information:
+*There are 133 total dog categories.
+*There are 8351 total dog images.
+*There are 6680 training dog images.
+*There are 835 validation dog images.
+*There are 836 test dog images.
+
+This sample is rich and big enough to continue on the process of building our CNN.
 
 ## Building the Dog and Human Detectors
 To determine whether an image contains a dog or a human, we created two separate detectors. The dog detector utilized a pre-trained CNN model, which was fine-tuned on our dog dataset. The model was able to accurately identify dogs in images by leveraging the learned features of the pre-trained model.
