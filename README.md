@@ -4,18 +4,15 @@ This repository contains the code and resources for building a dog breed classif
 
 ## Contents
 
-- `dog_app.ipynb`: Jupyter Notebook containing the step-by-step process of building the dog breed classifier. It includes data preprocessing, model training, and evaluation.
+- `dog_app.ipynb`: Jupyter Notebook containing the step-by-step process of building the dog breed classifier. It includes data preprocessing, model training, and evaluation. All you need to do is run each cell code in order.
 - `README.md`: Readme file providing an overview of the repository and its contents.
 - `Blog.md`: Markdown file containing a blog entry about the dog breed classifier.
+- `extract_bottleneck_features.py`: python script is for transfering learning, i.e pre-trained models, typically trained on large datasets, are utilized as a starting point for solving new tasks or working with smaller datasets. The syntax is included in `dog_app.ipynb`.
+- `extract_bottleneck_features.py`
 
 ## Requirements
 
-To run the Jupyter Notebook and use the dog breed classifier, the following dependencies are required:
-
-- Python 3
-- Jupyter Notebook
-- Keras with TensorFlow backend
-- OpenCV
+Check the [requirements](requirements.txt) for more information.
 
 ## Blog Entry
 
