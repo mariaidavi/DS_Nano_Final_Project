@@ -24,10 +24,3 @@ For a detailed explanation of the dog breed classifier and the process behind it
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
-
-## Acknowledgments
-
-- The dataset used for training the model was obtained from [Kaggle](https://www.kaggle.com/c/dog-breed-identification/data).
-- The pre-trained CNN models were sourced from Keras' built-in models and ImageNet weights.
-
-Feel free to explore, experiment, and expand upon the dog breed classifier. Contributions and improvements are welcome!
