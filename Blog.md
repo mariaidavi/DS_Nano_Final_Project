@@ -2,6 +2,43 @@
 
 ## Problem Statement:
 The problem is to build a dog breed classification model that can accurately predict the breed of a dog given an image. The model should be able to handle different dog breeds and achieve high accuracy in its predictions.
+
+# Strategy for Building the AI Dog Breed Classifier
+
+## Problem Statement Recap
+The problem is to build a dog breed classification model that can accurately predict the breed of a dog given an image. The model should be able to handle different dog breeds and achieve high accuracy in its predictions.
+
+## Strategy
+
+To solve the problem of dog breed classification, we will follow a step-by-step strategy that encompasses data preparation, model development, training, and evaluation. The expected solution will be a trained model capable of accurately classifying dog breeds based on input images. Here is the strategy:
+
+1. **Data Collection and Preprocessing:**
+   - Collect a diverse dataset of dog images, containing various breeds.
+   - Curate the dataset by ensuring accurate labeling of dog breeds.
+   - Incorporate a dataset of human images for identifying resemblances between humans and dog breeds.
+   - Preprocess the images by resizing them to a uniform resolution, applying normalization techniques, and augmenting the dataset to improve model generalization.
+
+2. **Building the Dog and Human Detectors:**
+   - Train a dog detector using a pre-trained CNN model, fine-tuning it on the curated dog dataset.
+   - Implement a human face detection algorithm using computer vision techniques to identify human faces in images.
+
+3. **Dog Breed Classification:**
+   - Utilize a pre-trained CNN model to classify the dog breed based on input images.
+   - Train the model on the curated dog dataset, enabling it to recognize and classify various dog breeds.
+   - Obtain a predicted probability distribution across all dog breeds for each input image.
+   - Consider the breed with the highest probability as the predicted breed.
+
+4. **Model Training and Evaluation:**
+   - Split the dataset into training, validation, and testing subsets.
+   - Train the model using the training set and validate it on the validation set.
+   - Evaluate the model's performance using appropriate evaluation metrics, such as accuracy, precision, recall, and F1 score.
+   - Test the model on a separate testing set consisting of unseen images to assess its generalization and accuracy in real-world scenarios.
+
+5. **Model Improvement and Future Work:**
+   - Experiment with different CNN architectures (e.g., ResNet, Inception, Xception) and fine-tune their parameters to improve model performance and accuracy.
+   - Expand the dataset using additional data augmentation techniques (e.g., rotation, translation, flipping) to enhance model generalization and handling of variations in dog poses and backgrounds.
+   - Consider ensemble methods by building an ensemble of multiple models to leverage the diversity of predictions and improve overall performance.
+
 ## Introduction
 In today's blog post, we delve into the fascinating world of artificial intelligence and explore how we can build a model to classify dog breeds. We'll go through the step-by-step process of creating a dog breed classifier that can detect both dogs and humans, and even find a resemblance between humans and specific dog breeds. This project demonstrates the power of deep learning and convolutional neural networks (CNNs) in image classification tasks.
 
