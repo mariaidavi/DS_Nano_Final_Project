@@ -1,5 +1,7 @@
 # Building an AI Dog Breed Classifier: From Humans to Dogs
 
+## Problem Statement:
+The problem is to build a dog breed classification model that can accurately predict the breed of a dog given an image. The model should be able to handle different dog breeds and achieve high accuracy in its predictions.
 ## Introduction
 In today's blog post, we delve into the fascinating world of artificial intelligence and explore how we can build a model to classify dog breeds. We'll go through the step-by-step process of creating a dog breed classifier that can detect both dogs and humans, and even find a resemblance between humans and specific dog breeds. This project demonstrates the power of deep learning and convolutional neural networks (CNNs) in image classification tasks.
 
