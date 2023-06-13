@@ -1,6 +1,9 @@
 # Building an AI Dog Breed Classifier: From Humans to Dogs
 
-## Problem Statement:
+## Introduction
+In today's blog post, we delve into the fascinating world of artificial intelligence and explore how we can build a model to classify dog breeds. We'll go through the step-by-step process of creating a dog breed classifier that can detect both dogs and humans, and even find a resemblance between humans and specific dog breeds. This project demonstrates the power of deep learning and convolutional neural networks (CNNs) in image classification tasks.
+
+## Problem Statement
 The problem is to build a dog breed classification model that can accurately predict the breed of a dog given an image. The model should be able to handle different dog breeds and achieve high accuracy in its predictions.
 
 ## Strategy
@@ -34,9 +37,6 @@ To solve the problem of dog breed classification, we will follow a step-by-step 
    - Expand the dataset using additional data augmentation techniques (e.g., rotation, translation, flipping) to enhance model generalization and handling of variations in dog poses and backgrounds.
    - Consider ensemble methods by building an ensemble of multiple models to leverage the diversity of predictions and improve overall performance.
 
-## Introduction
-In today's blog post, we delve into the fascinating world of artificial intelligence and explore how we can build a model to classify dog breeds. We'll go through the step-by-step process of creating a dog breed classifier that can detect both dogs and humans, and even find a resemblance between humans and specific dog breeds. This project demonstrates the power of deep learning and convolutional neural networks (CNNs) in image classification tasks.
-
 ## Dataset and Preprocessing
 
 **Data description**:
@@ -54,6 +54,24 @@ More specifically, the data contains the following information:
 *There are 836 test dog images.
 
 This sample is rich and big enough to continue on the process of building our CNN.
+
+## Methodolody (Data Preprocessing)
+## Data Preprocessing
+
+To prepare the dataset for training the dog breed classification model, several preprocessing steps were applied. These steps are outlined below:
+
+1. **Image Resizing:** All dog images were resized to a uniform resolution of 224x224 pixels. Resizing the images ensures consistent dimensions for inputting them into the convolutional neural network (CNN) model.
+
+2. **Normalization:** The pixel values of the images were normalized to a range of 0 to 1. This step involved dividing the pixel values by 255, the maximum pixel intensity value. Normalizing the pixel values helps in reducing the impact of variations in pixel intensity across different images.
+
+3. **Data Augmentation:** To increase the diversity of the training set and improve model generalization, data augmentation techniques were applied. These techniques included random rotation, translation, horizontal flipping, shearing, and zooming. Augmentation was performed on-the-fly during training, generating additional training examples with random modifications applied to the images.
+
+4. **Train-Validation-Test Split:** The dataset was split into three subsets: training, validation, and testing. The training set, comprising 80% of the data, was used to train the model. The validation set, consisting of 10% of the data, was used for hyperparameter tuning and evaluating the model's performance during training. The remaining 10% of the data was set aside as the test set to assess the final model's generalization on unseen data.
+
+5. **One-Hot Encoding:** The categorical dog breed labels were encoded using one-hot encoding. Each dog breed was represented as a binary vector, where the index corresponding to the breed was set to 1, and the rest were set to 0. This encoding scheme facilitated the classification task for the model.
+
+By applying these preprocessing steps, the dataset was prepared in a format suitable for training the dog breed classification model. These steps ensured standardized image sizes, enhanced model generalization through data augmentation, and provided numerical representations of the categorical labels for classification.
+
 
 ## Building the Dog and Human Detectors
 To determine whether an image contains a dog or a human, we created two separate detectors. The dog detector utilized a pre-trained CNN model, which was fine-tuned on our dog dataset. The model was able to accurately identify dogs in images by leveraging the learned features of the pre-trained model.
