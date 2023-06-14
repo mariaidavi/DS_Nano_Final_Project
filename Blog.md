@@ -161,4 +161,13 @@ Here's a table comparing the performance of each iteration:
 
 By iteratively modifying the neural network architecture, incorporating transfer learning, and making adjustments such as batch normalization and dropout, the model's performance was progressively improved. Each iteration was evaluated, and the modifications were made based on the evaluation results to enhance the model's ability to classify dog breeds accurately.
 
-In conclusion, our journey into building an AI dog breed classifier has showcased the power of deep learning and CNNs in image classification tasks. By combining the ability to detect dogs and humans with accurate breed classification, we have created an intelligent system capable of recognizing dog breeds and finding resemblances between humans and dogs. The potential applications of such a model are vast, from pet adoption services to entertainment and beyond. With further advancements and improvements, we can expect even more accurate and sophisticated models in the future.
+### Conclusion
+In conclusion, the dog breed AI project involved the task of classifying dog breeds based on images. The initial model architecture, a simple CNN, showed low accuracy on both the train and test sets. To improve the performance, several iterations were made.
+
+In the second iteration, a pre-trained VGG16 model was used as a base. This led to a significant increase in the number of parameters but also improved the accuracy on both the train and test sets. However, the performance was not optimal, with an accuracy of 47% on the test set.
+
+In the final iteration, a more complex CNN architecture, inspired by VGG19, was implemented. This architecture further increased the number of parameters and incorporated additional layers such as batch normalization and dropout. As a result, the model achieved an accuracy of 83% on the train set and 67% on the test set, indicating a significant improvement compared to previous iterations.
+
+It is worth noting that the final model's accuracy can still be further improved by fine-tuning hyperparameters, increasing the dataset size, or exploring other advanced techniques. However, the implemented architecture demonstrates the potential of CNNs for dog breed classification and provides a solid foundation for further enhancements.
+
+Overall, the project highlights the importance of model selection, architecture design, and iterative improvement for achieving higher accuracy in image classification tasks.
