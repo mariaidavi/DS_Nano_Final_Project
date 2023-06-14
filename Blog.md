@@ -125,26 +125,40 @@ While our model achieved commendable results, there are several areas where furt
 
 ## Model Architecture Improvement Process
 
-### Initial Model Architecture (CNN from Scratch)
-The initial model architecture for the dog breed classification project was a Convolutional Neural Network (CNN) trained from scratch. The architecture consisted of several convolutional layers followed by pooling layers to extract features from the input images. These convolutional layers were then connected to fully connected layers, which were responsible for the final classification. The model was trained on the dog breed dataset with random weight initialization.
+The process of improvement involved iteratively modifying the neural network architecture and training it with the given dataset. Here's a description of the improvement process for each iteration:
 
-### Evaluation of Initial Model (CNN from Scratch)
-The initial model was evaluated on the dog breed dataset using metrics such as accuracy. The model achieved an accuracy of 4.9% on the validation set. However, during evaluation, it was observed that the model struggled to accurately classify breeds.
+### Initial Model Architecture
+The initial model architecture was a simple CNN with three convolutional layers followed by global average pooling and a dense layer with softmax activation for classification. The model was trained from scratch using the provided dataset.
 
-### Iteration 1 - Transfer Learning (Pre-trained Model)
-To improve the model's performance and address the challenge of classifying similar-looking breeds, transfer learning using a pre-trained model was employed. The pre-trained model used was a popular architecture, such as VGG16, which had been previously trained on a large dataset like ImageNet. The fully connected layers of the pre-trained model were replaced with a new fully connected layer tailored to the dog breed classification task. The weights of the pre-trained layers were frozen to preserve the learned features.
+### Evaluation of Initial Model
+The initial model was evaluated on the dataset, and its performance metrics such as accuracy, loss, and other relevant metrics were analyzed. Based on the evaluation, it was observed that the model had room for improvement, especially in capturing more complex patterns and distinguishing between similar dog breeds.
 
-### Evaluation of Iteration 1 (Transfer Learning)
-After incorporating transfer learning, the model was re-evaluated on the dog breed dataset. It achieved a significant improvement in performance, with the accuracy increasing to 67% on the validation set. The use of pre-trained weights allowed the model to leverage the learned features from the large-scale dataset, resulting in better generalization and improved discrimination between similar-looking breeds.
+### Iteration 1 - Transfer Learning (VGG16)
+In the first iteration, transfer learning was applied using the VGG16 model as a pre-trained base. The pre-trained weights of the VGG16 model were loaded, and the last fully connected layer was replaced with a new dense layer with softmax activation for classification. The pre-trained layers were frozen, allowing the model to leverage the learned features from a large-scale dataset like ImageNet.
+
+### Evaluation of Iteration 1
+The model with the VGG16 base was evaluated on the dataset. The evaluation metrics were calculated, and the performance was compared to the initial model. It was observed that the model achieved a higher accuracy, indicating improved performance due to the utilization of pre-trained weights.
+
+### Iteration 2 - VGG19-based Model with Batch Normalization
+In the second iteration, a new model architecture based on VGG19 was used. The architecture included multiple convolutional layers with batch normalization after each convolutional layer to enhance training stability and performance. The model also included additional modifications such as modified max pooling and dropout layers to further improve the model's generalization capability.
+
+### Evaluation of Iteration 2
+The VGG19-based model with batch normalization was evaluated on the dataset. The model's performance was compared to the previous iterations, and it was observed that the model achieved even better results in terms of accuracy and other evaluation metrics.
 
 ### Final Model Architecture
-In the second iteration, the fine-tuning technique was applied to further improve the model's performance. Fine-tuning involves unfreezing some of the pre-trained layers and allowing them to be updated during training. This allowed the model to adapt and refine the learned features specifically for the dog breed classification task. The learning rate was adjusted to ensure more focused training on the newly added layers.
+The final model architecture consisted of a modified VGG19-based model with batch normalization, max pooling, and dropout layers. The model had a stack of convolutional layers with batch normalization, followed by a modified max pooling layer. The feature maps were then flattened and passed through fully connected layers with batch normalization and dropout layers for regularization. Finally, a dense layer with softmax activation was added for multi-class classification.
 
 ### Evaluation of Final Model
-The final model's performance was evaluated on the dog breed dataset, achieving an accuracy of 90%, which outperformed the initial model. Precision, recall, and F1 score were also calculated, showing significant improvements compared to the initial model.
+The final model was evaluated on the dataset to assess its performance. The evaluation metrics, including accuracy, loss, precision, recall, and F1 score, were calculated. The results indicated that the final model achieved the highest accuracy and improved performance compared to the initial model.
 
-By documenting the improvements made in each iteration, including the transition from training a CNN from scratch to utilizing transfer learning and fine-tuning, we can track the progress and demonstrate the effectiveness of the final model architecture.
+Here's a table comparing the performance of each iteration:
 
-By documenting the process of improving the model architecture and reporting the initial, intermediate, and final solutions, we can track the progress made and provide evidence for the accuracy and effectiveness of the final solution.
+|       Model       | Total params | Trainable params | Non-trainable params | Accuracy (Train Set) | Accuracy (Test Set) |
+|:-----------------:|:------------:|:---------------:|:--------------------:|:--------------------:|:-------------------:|
+|  Initial Model    |    19,189    |      19,189     |          0           |         4.7%         |         4.9%        |
+|  Iteration 1 (VGG16) |    68,229    |      68,229     |          0           |         58%         |         47%         |
+|  Final CNN        |  2,895,621   |    2,890,245    |        5,376         |         83%         |         67%         |
+
+By iteratively modifying the neural network architecture, incorporating transfer learning, and making adjustments such as batch normalization and dropout, the model's performance was progressively improved. Each iteration was evaluated, and the modifications were made based on the evaluation results to enhance the model's ability to classify dog breeds accurately.
 
 In conclusion, our journey into building an AI dog breed classifier has showcased the power of deep learning and CNNs in image classification tasks. By combining the ability to detect dogs and humans with accurate breed classification, we have created an intelligent system capable of recognizing dog breeds and finding resemblances between humans and dogs. The potential applications of such a model are vast, from pet adoption services to entertainment and beyond. With further advancements and improvements, we can expect even more accurate and sophisticated models in the future.
